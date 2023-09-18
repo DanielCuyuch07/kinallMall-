@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="541.0" prefWidth="1339.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.andycuyuch.controller.CuentasPorPagarController">
+   <children>
+      <AnchorPane layoutX="1102.0" layoutY="300.0" prefHeight="351.0" prefWidth="334.0" style="-fx-background-color: E4D00A;" />
+      <AnchorPane prefHeight="541.0" prefWidth="211.0" style="-fx-background-color: E49E0A;">
+         <children>
+            <Pane layoutX="26.0" layoutY="14.0" prefHeight="193.0" prefWidth="159.0" style="-fx-background-color: E4DA0A; -fx-background-radius: 0  0 50 50;">
+               <children>
+                  <Label layoutX="21.0" layoutY="3.0" text="Cuentas Por ">
+                     <font>
+                        <Font name="Elephant" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="54.0" layoutY="25.0" text="Pagar">
+                     <font>
+                        <Font name="Elephant" size="17.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="145.0" fitWidth="150.0" layoutX="7.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/CuentasPorPagar.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <VBox layoutY="323.0" prefHeight="216.0" prefWidth="211.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="54.0" prefWidth="216.0" styleClass="button1" stylesheets="@../resource/ObjectKinalMall2021.css" text="  Nuevo">
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="37.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/NuevoScene.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="23.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#eliminar" prefHeight="51.0" prefWidth="216.0" styleClass="button1" stylesheets="@../resource/ObjectKinalMall2021.css" text="  Eliminar">
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="37.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/EliminarScene.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="21.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnEditar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#editar" prefHeight="54.0" prefWidth="216.0" styleClass="button1" stylesheets="@../resource/ObjectKinalMall2021.css" text="  Editar">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="23.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="32.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Edit.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReporte" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#reporte" prefHeight="54.0" prefWidth="217.0" styleClass="button1" stylesheets="@../resource/ObjectKinalMall2021.css" text=" Reporte">
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="35.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Report.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="23.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <ImageView fitHeight="51.0" fitWidth="51.0" layoutX="80.0" layoutY="220.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/CasaPNG.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <GridPane fx:id="grpFechaLimite" layoutX="221.0" layoutY="49.0" prefHeight="123.0" prefWidth="1107.0" styleClass="calendar" stylesheets="@../resource/DatePicker.css">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="234.6" minWidth="10.0" prefWidth="232.199951171875" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.0" minWidth="10.0" prefWidth="131.40004882812502" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="316.0000244140625" minWidth="10.0" prefWidth="199.4000244140625" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="266.0" minWidth="10.0" prefWidth="149.19997558593752" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="334.6000122070312" minWidth="10.0" prefWidth="217.60000000000002" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="266.0" minWidth="10.0" prefWidth="130.4000000000001" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="37.599996948242186" minHeight="10.0" prefHeight="33.599996948242186" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="52.00001831054687" minHeight="10.0" prefHeight="44.800006103515635" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="33.600006103515625" minHeight="7.199981689453125" prefHeight="30.399993896484375" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Codigo Cuentas Por Pagar">
+               <font>
+                  <Font name="Elephant" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCodigoCuentaPagar" editable="false" GridPane.columnIndex="1" />
+            <Label text="Numero Factura" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Elephant" size="17.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="txtNumeroFactura" editable="false" GridPane.columnIndex="3" />
+            <Label text="Fecha Limite De Pago" GridPane.columnIndex="4">
+               <font>
+                  <Font name="Elephant" size="17.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </Label>
+            <Label text="Estado De Pago" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Elephant" size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtEstadoPago" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Valor De Pago Neto" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Elephant" size="17.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="txtValorNetoPago" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label text="Codigo Administracion" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Elephant" size="17.0" />
+               </font>
+               <padding>
+                  <Insets left="13.0" />
+               </padding>
+            </Label>
+            <ComboBox fx:id="cmbCodigoAdministracion" prefWidth="150.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <Label text="Codigo Proveedor" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Elephant" size="17.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Label>
+            <ComboBox fx:id="cmbCodigoProveedor" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <TableView fx:id="tblCuentasPorPagar" layoutX="223.0" layoutY="213.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="313.0" prefWidth="1094.0" stylesheets="@../resource/ObjectKinalMall2021.css">
+        <columns>
+          <TableColumn fx:id="colCodigoCuentasPorPagar" prefWidth="166.3999786376953" text="Codigo  De Cuentas P" />
+          <TableColumn fx:id="colNumeroFactura" prefWidth="144.80001831054688" text="Numero Factura" />
+            <TableColumn fx:id="colFechaLimitePago" prefWidth="133.5999755859375" text="Fecha L De Pago" />
+            <TableColumn fx:id="colEstadoPago" prefWidth="156.7999267578125" text="Estado De Pago" />
+            <TableColumn fx:id="colValorNetoPago" prefWidth="165.60009765625" text="Valor De Pago Neto" />
+            <TableColumn fx:id="colCodigoAdministracion" prefWidth="175.20001220703125" text="Codigo Administracion" />
+            <TableColumn fx:id="colCodigoProveedores" prefWidth="152.0" text="Codigo Proveedor" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="211.0" layoutY="-2.0" prefHeight="33.0" prefWidth="1128.0" style="-fx-background-color: E4D00A;">
+         <children>
+            <Label layoutX="404.0" layoutY="7.0" prefHeight="24.0" prefWidth="218.0" text="Ingrese sus Datos ">
+               <font>
+                  <Font name="Perpetua Titling MT Bold" size="19.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="26.0" fitWidth="28.0" layoutX="632.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Usuario.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="51.0" fitWidth="66.0" layoutX="1266.0" layoutY="147.0" onMouseClicked="#ventanaProveedores" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Prooveedor.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

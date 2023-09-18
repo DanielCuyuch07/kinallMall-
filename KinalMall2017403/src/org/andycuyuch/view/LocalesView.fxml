@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="1137.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.andycuyuch.controller.LocalesController">
+   <children>
+      <AnchorPane prefHeight="535.0" prefWidth="212.0" style="-fx-background-color: E49E0A;">
+         <children>
+            <VBox layoutY="311.0" prefHeight="216.0" prefWidth="218.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="54.0" prefWidth="216.0" styleClass="button1" stylesheets="@../resource/ObjectKinalMall2021.css" text="  Nuevo">
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="37.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/NuevoScene.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="23.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#eliminar" prefHeight="51.0" prefWidth="216.0" styleClass="button1" stylesheets="@../resource/ObjectKinalMall2021.css" text="  Eliminar">
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="37.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/EliminarScene.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="21.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnEditar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#editar" prefHeight="54.0" prefWidth="216.0" styleClass="button1" stylesheets="@../resource/ObjectKinalMall2021.css" text="  Editar">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="23.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="32.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Edit.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReporte" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#reporte" prefHeight="54.0" prefWidth="217.0" styleClass="button1" stylesheets="@../resource/ObjectKinalMall2021.css" text=" Reporte">
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="35.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Report.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="23.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <Pane layoutX="24.0" layoutY="14.0" prefHeight="185.0" prefWidth="159.0" style="-fx-background-color: E4DA0A; -fx-background-radius: 0  0 50 50;">
+               <children>
+                  <ImageView fitHeight="155.0" fitWidth="153.0" layoutX="3.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Locall.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutY="-8.0" prefHeight="45.0" prefWidth="159.0" text="     Locales">
+                     <font>
+                        <Font name="Elephant" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <ImageView fitHeight="54.0" fitWidth="74.0" layoutX="79.0" layoutY="227.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/CasaPNG.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="949.0" layoutY="-322.0" prefHeight="421.0" prefWidth="478.0" rotate="-133.6" style="-fx-background-radius: 30 30 30 30; -fx-background-color: E4D00A;" />
+      <TableView fx:id="tblLocales" layoutX="227.0" layoutY="226.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="301.0" prefWidth="898.0" stylesheets="@../resource/ObjectKinalMall2021.css">
+        <columns>
+          <TableColumn fx:id="colCodigoLocal" prefWidth="116.0" text="Codigo Local " />
+          <TableColumn fx:id="colSaldoFavor" prefWidth="119.99996948242188" text="Saldo Favor " />
+            <TableColumn fx:id="colSaldoContra" prefWidth="126.40005493164062" text="Saldo  Contra" />
+            <TableColumn fx:id="colMesesPendientes" minWidth="8.0" prefWidth="135.199951171875" text="Meses Pendientes" />
+            <TableColumn fx:id="colDisponibilidad" minWidth="1.60003662109375" prefWidth="113.60003662109375" text="Disponibilidad" />
+            <TableColumn fx:id="colValorLocal" minWidth="0.0" prefWidth="116.79998779296875" text="Valor Local" />
+            <TableColumn fx:id="colValorAdministrativos" minWidth="0.0" prefWidth="168.00006103515625" text="Valor Administracion" />
+        </columns>
+      </TableView>
+      <Label layoutX="227.0" layoutY="180.0" prefHeight="26.0" prefWidth="200.0" text="Valor Administrativo">
+         <font>
+            <Font name="Elephant" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtValorAdministrativo" editable="false" layoutX="447.0" layoutY="180.0" />
+      <GridPane layoutX="285.0" layoutY="39.0" prefHeight="26.0" prefWidth="245.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.7999755859375" minWidth="10.0" prefWidth="142.6000244140625" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.60003662109375" minWidth="10.0" prefWidth="111.39997558593751" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Codigo Local">
+               <font>
+                  <Font name="Elephant" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCodigoLocal" editable="false" prefHeight="26.0" prefWidth="155.0" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="227.0" layoutY="101.0" prefHeight="30.0" prefWidth="218.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.9999755859375" minWidth="10.0" prefWidth="123.9999755859375" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="93.5999755859375" minWidth="10.0" prefWidth="76.8000244140625" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Valor Local">
+               <font>
+                  <Font name="Elephant" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtValorLocal" editable="false" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="779.0" layoutY="166.0" prefHeight="54.0" prefWidth="315.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="134.20001220703125" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.199951171875" minWidth="0.0" prefWidth="140.79998779296875" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Meses Pendientes">
+               <font>
+                  <Font name="Elephant" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtMesesPendientes" editable="false" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="871.0" layoutY="101.0" prefHeight="30.0" prefWidth="231.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="146.39998779296874" minWidth="10.0" prefWidth="139.1999755859375" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="93.60003662109375" minWidth="10.0" prefWidth="80.8000244140625" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Saldo Contra">
+               <font>
+                  <Font name="Elephant" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtSaldoContra" editable="false" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="560.0" layoutY="101.0" prefHeight="30.0" prefWidth="218.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="132.79998779296875" minWidth="10.0" prefWidth="119.19998779296876" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.20001220703125" minWidth="10.0" prefWidth="81.60001220703126" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Saldo Favor">
+               <font>
+                  <Font name="Elephant" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtSaldoFavor" editable="false" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <Label layoutX="654.0" layoutY="14.0" text="Disponibilidad">
+         <font>
+            <Font name="Elephant" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDisponibilidad" editable="false" layoutX="826.0" layoutY="13.0" />
+      <AnchorPane layoutX="240.0" layoutY="-393.0" prefHeight="418.0" prefWidth="336.0" style="-fx-background-radius: 30 30 30 30; -fx-background-color: E4D00A;">
+         <children>
+            <Label layoutX="89.0" layoutY="391.0" prefHeight="26.0" prefWidth="115.0" text="Bienvenido">
+               <font>
+                  <Font name="Tw Cen MT Condensed Extra Bold" size="23.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="26.0" fitWidth="35.0" layoutX="204.0" layoutY="391.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Usuario.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <ImageView fitHeight="45.0" fitWidth="54.0" layoutX="661.0" layoutY="170.0" onMouseClicked="#ventanaCuentasPorCobrar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Cuentass.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="981.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.andycuyuch.controller.UsuarioController">
+   <children>
+      <AnchorPane prefHeight="570.0" prefWidth="222.0" style="-fx-background-color: E49E0A;">
+         <children>
+            <Pane layoutX="31.0" layoutY="14.0" prefHeight="185.0" prefWidth="159.0" style="-fx-background-color: E4DA0A; -fx-background-radius: 0  0 50 50;">
+               <children>
+                  <Label layoutX="42.0" layoutY="2.0" text="Usuario">
+                     <font>
+                        <Font name="Elephant" size="19.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="131.0" fitWidth="139.0" layoutX="14.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Usuariio.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <VBox layoutX="-1.0" layoutY="285.0" prefHeight="116.0" prefWidth="222.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="46.0" prefWidth="218.0" styleClass="button1" stylesheets="@../resource/ObjectKinalMall2021.css" text="  Nuevo">
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/TipoCliente.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BOTTOM_LEFT" mnemonicParsing="false" prefHeight="46.0" prefWidth="218.0" styleClass="button1" stylesheets="@../resource/ObjectKinalMall2021.css" text="Cancelar">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/cancelar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="24.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="60.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </VBox>
+            <ImageView fitHeight="56.0" fitWidth="76.0" layoutX="82.0" layoutY="468.0" onMouseClicked="#ventanaLogin" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Add.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="83.0" layoutY="524.0" prefHeight="24.0" prefWidth="63.0" text="Login">
+               <font>
+                  <Font name="Elephant" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="222.0" prefHeight="50.0" prefWidth="758.0" style="-fx-background-color: E4D00A;">
+         <children>
+            <Label layoutX="246.0" layoutY="13.0" prefHeight="24.0" prefWidth="218.0" text="Ingrese sus Datos ">
+               <font>
+                  <Font name="Perpetua Titling MT Bold" size="19.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="26.0" fitWidth="28.0" layoutX="471.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Usuario.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="816.0" layoutY="112.0" prefHeight="444.0" prefWidth="381.0" rotate="-47.6" style="-fx-background-color: E4D00A;" />
+      <GridPane layoutX="262.0" layoutY="196.0" prefHeight="321.0" prefWidth="659.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="56.19998779296875" minHeight="10.0" prefHeight="53.799993896484374" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="35.60001220703125" minHeight="10.0" prefHeight="25.600006103515632" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="56.39999999999999" minHeight="10.0" prefHeight="47.19998779296874" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="55.800024414062506" minHeight="10.0" prefHeight="23.20001220703125" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="57.199987792968756" minHeight="10.0" prefHeight="51.80000000000001" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="68.20001831054688" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="60.80001220703127" minHeight="10.0" prefHeight="60.00002441406252" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="24.0" prefWidth="194.0" text="Nombre Del Ususario ">
+               <font>
+                  <Font name="Elephant" size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNombreUsuario" editable="false" GridPane.columnIndex="1" />
+            <Label prefHeight="24.0" prefWidth="188.0" text="Apellido Del Usuario" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Elephant" size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtApellidoUsuario" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label prefHeight="24.0" prefWidth="175.0" text="Usuario" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Elephant" size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtUsuario" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label prefHeight="24.0" prefWidth="175.0" text="Contraseña" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Elephant" size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtPassword" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
